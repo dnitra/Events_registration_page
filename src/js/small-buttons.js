@@ -15,7 +15,7 @@ export const smallWidgetToBig = (dataArray) => {
         document.getElementById(`${Number(id) - 1}`)
       );
 
-      //.after(document.getElementById(`${Number(id) - 1}`))
+
     });
   });
 };
