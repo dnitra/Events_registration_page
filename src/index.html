@@ -1,14 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="js/script.js" defer></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+  <script src="js/script.js" defer></script>
 
-    <title>Events registration page</title>
-  </head>
-  <body></body>
+  <title>Events registration page</title>
+</head>
+
+<body>
+  <form action="#" method="post">
+    <h2>Sign Up</h2>
+    <p>
+      <label for="Name" class="floatLabel">First Name</label>
+      <input id="Name" name="Name" input type="text">
+    </p>
+    <p>
+      <label for="last_name" class="floatLabel">Last Name</label>
+      <input id="last_name" name="last_name" input type="text">
+    </p>
+    <p>
+      <label for="Email" class="floatLabel">Email</label>
+      <input id="Email" name="Email" input type="text">
+    </p>
+    <p>
+      <label for="phone_nr" class="floatLabel">Phone Nr.</label>
+      <input id="phone_nr" name="phone_nr" input type="number">
+    </p>
+    <p>
+      <label for="age">I'm over 18 years old</label>
+      <input type="checkbox" class="checkbox" input name="age" id="age" value="">
+    </p>
+    <p>
+      <input type="submit" value="Register" id="submit">
+    </p>
+  </form>
+  <script src="js/form.js" defer></script>
+</body>
+
 </html>
