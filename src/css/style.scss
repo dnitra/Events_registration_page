@@ -13,8 +13,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Noto Sans', sans-serif;
-
+  font-family: "Noto Sans", sans-serif;
 }
 
 form {
@@ -58,7 +57,7 @@ form {
 
   span {
     display: block;
-    background: #F9A5A5;
+    background: #f9a5a5;
     padding: 2px 5px;
     color: #666;
   }
@@ -78,8 +77,6 @@ form {
     background: rgb(211, 129, 129);
   }
 
-
-
   label {
     position: absolute;
     left: 8px;
@@ -97,10 +94,11 @@ form {
       font-size: 14px;
     }
   }
-
 }
 
-
+form .hidden {
+  display: none;
+}
 
 // -----------------------landing page -----------------
 
