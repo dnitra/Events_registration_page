@@ -1,19 +1,106 @@
 $darkGrey: grey;
 $lightGrey: rgb(163, 163, 163);
-$font-family: sans-serif;
 
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 body {
   margin: 0;
-  font-family: $font-family;
+  font-family: 'Noto Sans', sans-serif;
+
 }
+
+form {
+  background: #fff;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 50px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 2px;
+  border: 3px solid red;
+
+  h2 {
+    margin: 0 0 50px 0;
+    padding: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: darken(#e5e5e5, 50%);
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  p {
+    margin: 0 0 3em 0;
+    position: relative;
+  }
+
+  input {
+    display: flex;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    color: #666;
+  }
+
+  .checkbox {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 60px;
+    color: #666;
+  }
+
+  span {
+    display: block;
+    background: #F9A5A5;
+    padding: 2px 5px;
+    color: #666;
+  }
+
+  input[type="submit"] {
+    border-radius: 2px;
+    border: none;
+    color: #666666;
+    cursor: pointer;
+    display: block;
+    font-size: 25px;
+    line-height: 0.6;
+    outline: none;
+  }
+
+  input[type="submit"]:hover {
+    background: rgb(211, 129, 129);
+  }
+
+
+
+  label {
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    color: #999;
+    font-size: 14px;
+    display: inline-block;
+    padding: 4px 10px;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0);
+
+    &.floatLabel {
+      top: -11px;
+      background-color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+    }
+  }
+
+}
+
+
 
 // -----------------------landing page -----------------
 
@@ -42,12 +129,14 @@ body {
   h1 {
     font-size: 1.2rem;
   }
+
   &__nav {
     display: flex;
     justify-content: space-around;
     gap: 10px;
     margin-right: 10px;
   }
+
   &__link {
     color: black;
     text-decoration: none;
@@ -97,6 +186,7 @@ body {
       -moz-transform: rotate(-90deg);
       -ms-transform: rotate(-90deg);
       -o-transform: rotate(-90deg);
+
       h3 {
         margin: 0;
         text-transform: uppercase;
@@ -130,6 +220,7 @@ body {
         margin: 0;
         margin-bottom: 10px;
       }
+
       button {
         width: 100px;
         padding: 5px;
