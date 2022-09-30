@@ -9,7 +9,7 @@ class SmallEvent {
     divEvent.id = `${this.element.id}`;
     divEvent.innerHTML = `
         <h3>${this.element.name}</h3>
-        <button>More</button>`;
+        <a href="#${divEvent.id}"><button>More</button></a>`;
     mainContainer.appendChild(divEvent);
     this.divEvent = divEvent;
   }
