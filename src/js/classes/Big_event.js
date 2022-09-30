@@ -1,3 +1,5 @@
+import { generateForm } from "./../script";
+
 class BigEvent {
   constructor(element) {
     this.element = element;
@@ -13,10 +15,15 @@ class BigEvent {
         <div class="big-widget__info-container">
             <h2>${this.element.name}</h2>
             <p>${this.element.description}</p>
-            <button>Register</button>
+            <button class="register">Register</button>
         </div>`;
     mainContainer.appendChild(divEvent);
     this.divEvent = divEvent;
+
+    // pokus o eventlistener na cudliku
+
+    let registerButton = document.querySelector(".register");
+    registerButton.addEventListener("click", () => generateForm(divEvent.id));
   }
 }
 export default BigEvent;

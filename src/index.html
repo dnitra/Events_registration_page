@@ -6,33 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet" />
   <script src="js/script.js" defer></script>
+  <title>Events registration page</title>
 </head>
+<header class="header">
+  <h1>
+    Events in Prague
+  </h1>
+  <nav class="header__nav">
+    <a class="header__link" href="#1">
+      <div>Home</div>
+    </a>
+    <a class="header__link" href="#1">
+      <div>About</div>
+    </a>
+    <a class="header__link" href="#1">
+      <div>Contact</div>
+    </a>
+  </nav>
+</header>
 
 <body>
-  <main id="home" class="events">
-  </main>
-
-  <header class="header">
-    <h1>
-      Events in Prague
-    </h1>
-    <nav class="header__nav">
-      <a class="header__link" href="#1">
-        <div>Home</div>
-      </a>
-      <a class="header__link" href="#1">
-        <div>About</div>
-      </a>
-      <a class="header__link" href="#1">
-        <div>Contact</div>
-      </a>
-    </nav>
-  </header>
-  <main id="home" class="events">
-  </main>
-  <form name="registration_event" action="" method="post" autocomplete="off">
+  <main id="home" class="events"></main>
+  <form class="form hidden" name="registration_event" action="" method="post" autocomplete="off">
     <div class="close">X</div>
     </button>
     <h2>Sign Up</h2>
@@ -61,6 +58,10 @@
       <input type="submit" value="Register" id="submit">
     </p>
   </form>
+
+
+
+
   <section class="about_us">
     <div class="events_text">
       <h1>About The Event Agency</h1>

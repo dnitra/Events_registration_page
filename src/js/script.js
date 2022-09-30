@@ -25,30 +25,39 @@ const loadEvents = async () => {
 loadEvents();
 
 // preparing data, need to fill from the form -----------------------------------------------------------------------------------------------------
+export const generateForm = (eventId) => {
+  // zobrazeni form
+  document.querySelector(".form.hidden").classList.remove("hidden");
+  //   document.getElementById("home").style.display = "none";
+  // send data
+  let mybtn = document.querySelector("#submit");
 
-let mybtn = document.querySelector("#submit");
-
-mybtn.addEventListener("click", (event) => {
-  let dataRegistration = {
-    // registrationEventId : ,
-    registrationName: document.querySelector("#Name"),
-    registrationSurname: document.querySelector("#last_name"),
-    registrationEmail: document.querySelector("#Email"),
-    registrationPhone: document.querySelector("#phone_nr"),
-    registrationAge: document.querySelector("#age"),
-  };
-  // fetch send data --------------------------------------------------------------------------------------------------------------------------------
-  const sendData = async () => {
-    const registration = await fetch(
-      "https://test-api.codingbootcamp.cz/api/2ff26282/events/EVENT_ID/registrations",
-      {
-        method: "POST",
-        body: JSON.stringify(dataRegistration),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      }
-    );
-    const dataSendReponse = await registration.json();
-  };
-});
+  mybtn.addEventListener("click", (event) => {
+    console.log("form submit");
+    event.preventDefault();
+    console.log(eventId);
+    let dataRegistration = {
+      registrationEventId: eventId,
+      registrationName: document.getElementById("Name").value,
+      registrationSurname: document.getElementById("last_name").value,
+      email: document.getElementById("Email").value,
+      registrationPhone: document.getElementById("phone_nr").value,
+      registrationAge: document.getElementById("age").value,
+    };
+    // fetch send data --------------------------------------------------------------------------------------------------------------------------------
+    const sendData = async () => {
+      const registration = await fetch(
+        `https://test-api.codingbootcamp.cz/api/2ff26282/events/${eventId}/registrations`,
+        {
+          method: "POST",
+          body: JSON.stringify(dataRegistration),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      );
+      const dataSendReponse = await registration.json();
+    };
+    sendData();
+  });
+};
