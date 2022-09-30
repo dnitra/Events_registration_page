@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 import { smallWidgetToBig } from "./small-buttons";
-=======
 import BigEvent from "./classes/Big_event";
 import SmallEvent from "./classes/Small_event";
->>>>>>> main
 
 // load of the events trought fetch - zatim nejsou data, takze nize simulace dat -------------------------------------------------------------
 
@@ -14,15 +11,12 @@ const loadEvents = async () => {
   const data = await response.json();
   const dataArray = Array.from(data);
   dataArray.forEach((element, index) => {
-<<<<<<< HEAD
-=======
     if (index == 0) {
       const bigCard = new BigEvent(element);
       bigCard.createBigWidget();
     } else {
       SmallEvent.createSmallWidget(element);
     }
->>>>>>> main
     // console.log(element.id);
     // console.log(element.name);
     // console.log(element.date);
