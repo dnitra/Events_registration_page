@@ -103,7 +103,7 @@ form {
   display: flex;
   background-color: $darkGrey;
   justify-content: space-between;
- 
+
   top: 0;
   left: 0;
   width: 100%;
@@ -132,8 +132,9 @@ form {
     }
 
     &:hover {
-      background-color: #222;
-      color: white;
+      box-shadow: 0 0 1em #222;
+      border-radius: 2px;
+      
     }
   }
 }
