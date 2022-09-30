@@ -1,3 +1,6 @@
+import BigEvent from "./classes/Big_event";
+import SmallEvent from "./classes/Small_event";
+
 // load of the events trought fetch - zatim nejsou data, takze nize simulace dat -------------------------------------------------------------
 
 const loadEvents = async () => {
@@ -7,11 +10,17 @@ const loadEvents = async () => {
   const data = await response.json();
   const dataArray = Array.from(data);
   dataArray.forEach((element, index) => {
-    console.log(element.id);
-    console.log(element.name);
-    console.log(element.date);
-    console.log(element.description);
-    console.log(element.image_url);
+    if (index == 0) {
+      const bigCard = new BigEvent(element);
+      bigCard.createBigWidget();
+    } else {
+      SmallEvent.createSmallWidget(element);
+    }
+    // console.log(element.id);
+    // console.log(element.name);
+    // console.log(element.date);
+    // console.log(element.description);
+    // console.log(element.image_url);
   });
 };
 
@@ -74,7 +83,7 @@ loadEvents();
 //   },
 // ];
 
-//preparing data, need to fill from the form -----------------------------------------------------------------------------------------------------
+// preparing data, need to fill from the form -----------------------------------------------------------------------------------------------------
 // loadEvents();
 // let dataRegistration = {
 //     registrationEventId : ,
