@@ -4,4 +4,4 @@ var emailInput = document.querySelector("Email");
 var phoneNrInput = document.querySelector("phone_nr");
 var ageInput = document.querySelector("age");
 
-var firstNameInput
+var firstNameInput;

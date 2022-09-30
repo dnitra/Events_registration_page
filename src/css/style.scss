@@ -99,6 +99,23 @@ form {
 
 // -----------------------landing page -----------------
 
+.hidden {
+  opacity: 0;
+  filter: blur(5x);
+  transform: translateX(-100%);
+  transition: all 1s;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 .header {
   display: flex;
   background-color: $darkGrey;
@@ -189,6 +206,10 @@ form {
     }
 
     &__info-container {
+      margin-right: 10px;
+      position: absolute;
+      left: 250px;
+      height: 170px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -199,6 +220,8 @@ form {
       }
 
       button {
+        width: 100px;
+        padding: 5px;
         align-self: flex-end;
 
         background-color: white;
