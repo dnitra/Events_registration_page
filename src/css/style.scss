@@ -53,6 +53,7 @@ body {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   .big-widget {
     margin: 15px;
@@ -122,9 +123,13 @@ body {
 
   &__small-widget {
     margin: 15px;
-    width: 30%;
+    width: 200px;
     aspect-ratio: 1/1;
     background-color: $lightGrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

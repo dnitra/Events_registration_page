@@ -1,3 +1,5 @@
+import { smallWidgetToBig } from "./small-buttons";
+
 // load of the events trought fetch - zatim nejsou data, takze nize simulace dat -------------------------------------------------------------
 
 const loadEvents = async () => {
@@ -7,15 +9,18 @@ const loadEvents = async () => {
   const data = await response.json();
   const dataArray = Array.from(data);
   dataArray.forEach((element, index) => {
-    console.log(element.id);
-    console.log(element.name);
-    console.log(element.date);
-    console.log(element.description);
-    console.log(element.image_url);
+    // console.log(element.id);
+    // console.log(element.name);
+    // console.log(element.date);
+    // console.log(element.description);
+    // console.log(element.image_url);
   });
 };
 
 loadEvents();
+
+
+smallWidgetToBig();
 
 // const dataArray = [
 //   {
