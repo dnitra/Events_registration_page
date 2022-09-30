@@ -1,3 +1,4 @@
+import { smallWidgetToBig } from "./small-buttons";
 import BigEvent from "./classes/Big_event";
 import SmallEvent from "./classes/Small_event";
 
@@ -14,17 +15,19 @@ const loadEvents = async () => {
       const bigCard = new BigEvent(element);
       bigCard.createBigWidget();
     } else {
-      SmallEvent.createSmallWidget(element);
+      const smallCard = new SmallEvent(element);
+      smallCard.createSmallWidget();
     }
-    // console.log(element.id);
-    // console.log(element.name);
-    // console.log(element.date);
-    // console.log(element.description);
-    // console.log(element.image_url);
   });
+  smallWidgetToBig(dataArray);
 };
 
 loadEvents();
+
+<<<<<<< HEAD
+=======
+
+
 
 // const dataArray = [
 //   {
@@ -83,28 +86,32 @@ loadEvents();
 //   },
 // ];
 
+>>>>>>> main
 // preparing data, need to fill from the form -----------------------------------------------------------------------------------------------------
-// loadEvents();
-// let dataRegistration = {
-//     registrationEventId : ,
-//     registrationName : ,
-//     registrationSurname : ,
-//     registrationEmail: ,
-//     registrationPhone: ,
-//     registrationAge: ,
-// };
 
-// fetch send data --------------------------------------------------------------------------------------------------------------------------------
-// const sendData = async () => {
-//   const registration = await fetch(
-//     "https://test-api.codingbootcamp.cz/api/2ff26282/events/EVENT_ID/registrations",
-//     {
-//       method: "POST",
-//       body: JSON.stringify(dataRegistration),
-//       headers: {
-//         "Content-type": "application/json; charset=UTF-8",
-//       },
-//     }
-//   );
-//   const dataSendReponse = await registration.json();
-// };
+let mybtn = document.querySelector("#submit");
+
+mybtn.addEventListener("click", (event) => {
+  let dataRegistration = {
+    // registrationEventId : ,
+    registrationName: document.querySelector("#Name"),
+    registrationSurname: document.querySelector("#last_name"),
+    registrationEmail: document.querySelector("#Email"),
+    registrationPhone: document.querySelector("#phone_nr"),
+    registrationAge: document.querySelector("#age"),
+  };
+  // fetch send data --------------------------------------------------------------------------------------------------------------------------------
+  const sendData = async () => {
+    const registration = await fetch(
+      "https://test-api.codingbootcamp.cz/api/2ff26282/events/EVENT_ID/registrations",
+      {
+        method: "POST",
+        body: JSON.stringify(dataRegistration),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      }
+    );
+    const dataSendReponse = await registration.json();
+  };
+});
