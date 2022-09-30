@@ -3,5 +3,8 @@ var lastNameInput = document.querySelector("last_name");
 var emailInput = document.querySelector("Email");
 var phoneNrInput = document.querySelector("phone_nr");
 var ageInput = document.querySelector("age");
+var button = document.querySelector("submit");
 
-var firstNameInput
+const btn = button.addEventListener('click', function (
+
+)

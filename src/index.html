@@ -15,32 +15,67 @@
 <body>
   <main id="home" class="events">
   </main>
-  <form action="#" method="post">
+  <form name="registration_event" action="" method="post" autocomplete="off">
+    <div class="close">X</div>
+    </button>
     <h2>Sign Up</h2>
     <p>
       <label for="Name" class="floatLabel">First Name</label>
-      <input id="Name" name="Name" input type="text">
+      <input id="Name" name="Name" input type="text" required>
     </p>
     <p>
       <label for="last_name" class="floatLabel">Last Name</label>
-      <input id="last_name" name="last_name" input type="text">
+      <input id="last_name" name="last_name" input type="text" required>
     </p>
     <p>
       <label for="Email" class="floatLabel">Email</label>
-      <input id="Email" name="Email" input type="text">
+      <input id="Email" name="Email" input type="email" placeholder="@" required>
     </p>
     <p>
       <label for="phone_nr" class="floatLabel">Phone Nr.</label>
-      <input id="phone_nr" name="phone_nr" input type="number">
+      <input id="phone_nr" name="phone_nr" input type="number" required>
     </p>
+
     <p>
-      <label for="age">I'm over 18 years old</label>
-      <input type="checkbox" class="checkbox" input name="age" id="age" value="">
+      <label for="birth_date" class="floatLabel">Date of Birth</label>
+      <input id="birth_date" name="birth_date" input type="date" required>
     </p>
     <p>
       <input type="submit" value="Register" id="submit">
     </p>
   </form>
+  <section class="about_us">
+    <div class="events_text">
+      <h1>About The Event Agency</h1>
+      <p>The Event Agency has been responsible for numerous successful events and meetings, flawlessly organized
+        conferences and
+        unique creative concepts. We create events from 50 up to 5000 guests, without losing the focus to what
+        really
+        matters:
+        Creating unforgettable memories. Our events stay with you forever!</p>
+    </div>
+    <div class="events_image">
+
+      <img src="img/concert.jpg">
+    </div>
+  </section>
+
+
+  <footer>
+
+    <p>Where to find us?<br>
+      Address: Náměstí Republiky 1090/5,<br>
+      Staré Město, 110 00 Praha 1<br>
+      Czech Republic</p>
+
+    <p>Opening times<br>
+      Mon - Fri 9:00am - 5:00pm<br>
+      Sat 9:00am - 8:00pm<br>
+      Sun 9:00am - 4:00pm</p>
+
+
+
+  </footer>
 
 </body>
 
