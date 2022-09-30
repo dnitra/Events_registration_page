@@ -1,3 +1,7 @@
+$darkGrey: grey;
+$lightGrey: rgb(163, 163, 163);
+$font-family: sans-serif;
+
 html {
   box-sizing: border-box;
 }
@@ -8,5 +12,120 @@ html {
 }
 body {
   margin: 0;
-  
+  font-family: $font-family;
 }
+
+// -----------------------landing page -----------------
+
+.header {
+  display: flex;
+  background-color: $darkGrey;
+  justify-content: space-between;
+
+  h1 {
+    font-size: 1.2rem;
+  }
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-right: 10px;
+  }
+  &__link {
+    color: black;
+    text-decoration: none;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    &:hover {
+      background-color: $lightGrey;
+    }
+  }
+}
+
+.events {
+  margin: 50px auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .big-widget {
+    margin: 15px;
+    width: 100%;
+    min-height: 200px;
+    background-color: $lightGrey;
+
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &__featured {
+      position: relative;
+
+      margin: -20px 10px;
+      height: 2rem;
+
+      align-self: flex-end;
+
+      transform-origin: 0 0;
+      transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      h3 {
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    &__img-div {
+      position: absolute;
+      left: 3rem;
+
+      width: 170px;
+      animation-play-state: 1/1;
+      background-color: $darkGrey;
+      padding: 5px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__info-container {
+      margin-right: 10px;
+      position: absolute;
+      left: 250px;
+      height: 170px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      h2 {
+        margin: 0;
+        margin-bottom: 10px;
+      }
+      button {
+        width: 100px;
+        padding: 5px;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  &__small-widget {
+    margin: 15px;
+    width: 30%;
+    aspect-ratio: 1/1;
+    background-color: $lightGrey;
+  }
+}
+
+// ---------------------------------------------------
