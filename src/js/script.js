@@ -15,7 +15,7 @@ const loadEvents = async () => {
       const bigCard = new BigEvent(element);
       bigCard.createBigWidget();
     } else {
-      SmallEvent.createSmallWidget(element);
+      // SmallEvent.createSmallWidget(element);
     }
     // console.log(element.id);
     // console.log(element.name);
@@ -23,12 +23,13 @@ const loadEvents = async () => {
     // console.log(element.description);
     // console.log(element.image_url);
   });
+  smallWidgetToBig(dataArray);
 };
 
 loadEvents();
 
 
-smallWidgetToBig();
+
 
 // const dataArray = [
 //   {

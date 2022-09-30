@@ -17,6 +17,23 @@ body {
 
 // -----------------------landing page -----------------
 
+.hidden {
+  opacity: 0;
+  filter: blur(5x);
+  transform: translateX(-100%);
+  transition: all 1s;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 .header {
   display: flex;
   background-color: $darkGrey;
