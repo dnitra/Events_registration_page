@@ -11,7 +11,7 @@ class BigEvent {
     divEvent.id = `${this.element.id}`;
     divEvent.innerHTML = `
         <div class="big-widget__featured"><h3>Featured event</h3></div>
-        <div class="big-widget__img-div"><img src=${this.element.image_url} alt="image placeholder" /></div>
+        <img src=${this.element.image_url} alt="image placeholder" />
         <div class="big-widget__info-container">
             <h2>${this.element.name}</h2>
             <p>${this.element.description}</p>

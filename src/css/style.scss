@@ -1,4 +1,4 @@
-$darkGrey: grey;
+$darkGrey: white;
 $lightGrey: rgb(163, 163, 163);
 
 html {
@@ -17,6 +17,7 @@ body {
 }
 
 form {
+  display: none;
   background: #fff;
   padding: 4em 4em 2em;
   max-width: 400px;
@@ -96,10 +97,6 @@ form {
   }
 }
 
-form .hidden {
-  display: none;
-}
-
 // -----------------------landing page -----------------
 
 .hidden {
@@ -124,6 +121,10 @@ form .hidden {
   background-color: $darkGrey;
   justify-content: space-between;
 
+  top: 0;
+  left: 0;
+  width: 100%;
+
   h1 {
     font-size: 1.2rem;
   }
@@ -144,10 +145,12 @@ form .hidden {
       align-items: center;
       justify-content: center;
       height: 100%;
+      cursor: pointer;
     }
 
     &:hover {
-      background-color: $lightGrey;
+      background-color: #222;
+      color: white;
     }
   }
 }
@@ -158,26 +161,25 @@ form .hidden {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
 
   .big-widget {
     margin: 15px;
     width: 100%;
-    min-height: 200px;
-    background-color: $lightGrey;
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+    border: 3px solid red;
 
-    position: relative;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    padding: 10px;
+    gap: 20px;
 
     &__featured {
-      position: relative;
-
-      margin: -20px 10px;
-      height: 2rem;
+      display: flex;
 
       align-self: flex-end;
-
       transform-origin: 0 0;
       transform: rotate(-90deg);
       -webkit-transform: rotate(-90deg);
@@ -186,23 +188,20 @@ form .hidden {
       -o-transform: rotate(-90deg);
 
       h3 {
+        position: absolute;
+        top: 0;
+        left: 0;
         margin: 0;
         text-transform: uppercase;
+        width: 200px;
       }
     }
 
-    &__img-div {
-      position: absolute;
-      left: 3rem;
-
-      width: 170px;
-      animation-play-state: 1/1;
-      background-color: $darkGrey;
-      padding: 5px;
-
-      img {
-        width: 100%;
-      }
+    img {
+      margin-left: 20px;
+      width: 150px;
+      box-shadow: 0 0 1em #222;
+      border-radius: 2px;
     }
 
     &__info-container {
@@ -223,19 +222,54 @@ form .hidden {
         width: 100px;
         padding: 5px;
         align-self: flex-end;
+
+        background-color: white;
+        font-size: 1rem;
+        box-shadow: 0 0 2px #222;
+        border-radius: 2px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #222;
+          color: white;
+        }
       }
     }
   }
 
   &__small-widget {
-    margin: 15px;
-    width: 200px;
+    margin: 10px;
+    width: 45%;
+    padding: 20px;
     aspect-ratio: 1/1;
-    background-color: $lightGrey;
+
+    box-shadow: 0 0 1em #222;
+    border-radius: 2px;
+    border: 3px solid red;
+
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+
+    h3 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    button {
+      background-color: white;
+      font-size: 2rem;
+      box-shadow: 0 0 2px #222;
+      border-radius: 2px;
+      padding: 10px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #222;
+        color: white;
+      }
+    }
   }
 }
 
