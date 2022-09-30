@@ -104,6 +104,23 @@ form {
 
 // -----------------------landing page -----------------
 
+.hidden {
+  opacity: 0;
+  filter: blur(5x);
+  transform: translateX(-100%);
+  transition: all 1s;
+
+  @media (prefers-reduced-motion) {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
 .header {
   display: flex;
   background-color: $darkGrey;
@@ -142,6 +159,7 @@ form {
   width: 80%;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   .big-widget {
     margin: 15px;
@@ -213,9 +231,13 @@ form {
 
   &__small-widget {
     margin: 15px;
-    width: 30%;
+    width: 200px;
     aspect-ratio: 1/1;
     background-color: $lightGrey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 
